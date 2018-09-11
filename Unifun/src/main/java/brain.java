@@ -14,7 +14,6 @@ public class brain {
     private static final String[] sendTo = {"iachimciucbogdan@gmail.com"};
 
     public static void main(String args[]) throws Exception {
-
         Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
 
         new brain().sendSSLMessage(sendTo, emailSubjectTxt, emailMsgTxt, emailFromAddress);
