@@ -1,2 +1,2 @@
 # Here situated 
-## SMTP
+## SMTP Application
