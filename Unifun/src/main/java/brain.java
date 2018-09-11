@@ -1,11 +1,10 @@
+import java.security.Security;
+import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import java.security.Security;
-import java.util.Properties;
 
-public class Brain {
-
+public class brain{
     private static final String SMTP_HOST_NAME = "smtp.gmail.com";
     private static final String SMTP_PORT = "465";
     private static final String emailMsgTxt = "Test Message Contents";
@@ -18,10 +17,9 @@ public class Brain {
 
         Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
 
-        new Brain().sendSSLMessage(sendTo, emailSubjectTxt, emailMsgTxt, emailFromAddress);
+        new brain().sendSSLMessage(sendTo, emailSubjectTxt, emailMsgTxt, emailFromAddress);
         System.out.println("Sucessfully Sent mail to All Users");
     }
-
     public void sendSSLMessage(String recipients[], String subject,
                                String message, String from) throws MessagingException {
         boolean debug = true;
